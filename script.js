@@ -1,21 +1,32 @@
+let main = document.querySelector("#main");
+main.style.opacity = 0;
+window.addEventListener("load", () => {
+  main.style.opacity = 1;
+});
 const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
-  smooth: true
+  smooth: true,
+  mobile:{
+    smooth:true
+  }
 });
 let body = document.body;
 let playbtn = document.querySelector(".cont1 .play");
 let video = document.querySelector(".cont1 video");
 let videoCont = document.querySelector(".videoCont");
+function playbtnMove(dets){{
+  if (window.innerWidth < 1400) {
+  } else {
+    playbtn.style.position = "fixed";
+    playbtn.style.left = dets.x + "px";
+    playbtn.style.top = dets.y + "px";
+    playbtn.style.transform = `scale(1) translate(-50%,-50%) `;
+  }
+}}
 function playbtnAll() {
-  videoCont.addEventListener("mousemove", (dets) => {
-    if (window.innerWidth < 1400) {
-    } else {
-      playbtn.style.position = "fixed";
-      playbtn.style.left = dets.x + "px";
-      playbtn.style.top = dets.y + "px";
-      playbtn.style.transform = `scale(1) translate(-50%,-50%)`;
-    }
-  });
+  videoCont.addEventListener("mouseover", playbtnMove);
+  videoCont.addEventListener("mousemove", playbtnMove);
+  videoCont.addEventListener("mouseenter", playbtnMove);
   videoCont.addEventListener("mouseleave", () => {
     // playbtn.style.left=dets.x+"px";
     // playbtn.style.top=dets.y+"px";

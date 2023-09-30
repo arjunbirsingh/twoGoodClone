@@ -5,33 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/apple-touch-icon.png" />
     <title>twoGoodClone</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
+    <link
+      preload
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <style>
-        @media screen and (min-width:646px) {
-            .cont1 video{
-                height: 90vh;
-            }
-            .cont2 .imageDivCont{
-                flex-direction: row;
-                gap: 0.6rem;
-                text-align: center;
-            }
-            .cont2 .imageDivCont .imageDiv{
-                width: 33vw;
-            }
-            .cont2 .imageDivCont .floatingMenu{
-                width: 90%;
-            }
-            .cont1 .videoCont .play{
-                transform: scale(0);
-            }
+      @media screen and (min-width: 646px) {
+        .cont1 video {
+          height: 90vh;
         }
+        .cont1 .videoCont .play {
+          transform: scale(0);
+        }
+        .cont2 .imageDivCont {
+          flex-direction: row;
+          gap: 0.6rem;
+          text-align: center;
+        }
+        .cont2 .imageDivCont .imageDiv {
+          width: 33vw;
+        }
+        .cont2 .imageDivCont .floatingMenu {
+          width: 90%;
+        }
+        .cont3{
+          flex-direction: row;
+          padding-block: 20vh;
+          text-align: left;
+          gap: 15vw;
+          padding-inline: 1rem;
+        }
+        .cont3 h2{
+          font-size: 44px;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="main">
-      <nav>
+      <nav data-scroll-sticky>
         <div class="part1">
           <div class="navLogo">
             <svg
@@ -160,7 +174,12 @@
         </div>
         <div class="imageDivCont">
           <div class="imageDiv" id="imageDiv1">
-            <img data-scroll data-scroll-speed="1" src="assets/Rectangle 3.png" alt="">
+            <img
+              data-scroll
+              data-scroll-speed="1"
+              src="assets/Rectangle 3.png"
+              alt=""
+            />
             <div class="floatingMenu">
               <div class="dot"></div>
               <p>SHOP</p>
@@ -180,7 +199,12 @@
             </div>
           </div>
           <div class="imageDiv" id="imageDiv2">
-            <img data-scroll data-scroll-speed="1" src="assets/Rectangle 2.png" alt="">
+            <img
+              data-scroll
+              data-scroll-speed="1"
+              src="assets/Rectangle 2.png"
+              alt=""
+            />
             <div class="floatingMenu">
               <div class="dot"></div>
               <p>SHOP</p>
@@ -200,7 +224,12 @@
             </div>
           </div>
           <div class="imageDiv" id="imageDiv3">
-            <img data-scroll data-scroll-speed="1" src="assets/Rectangle 220.png" alt="">
+            <img
+              data-scroll
+              data-scroll-speed="1"
+              src="assets/Rectangle 220.png"
+              alt=""
+            />
             <div class="floatingMenu">
               <div class="dot"></div>
               <p>SHOP</p>
@@ -221,9 +250,51 @@
           </div>
         </div>
       </div>
+      <div class="cont3">
+        <div class="left">
+          <h2>We believe in people, until they believe in themselves again.</h2>
+        </div>
+        <div class="right">
+          <p>
+            Everything we do is designed to rebuild self worth and independence,
+            in order to break free from the cycle of disadvantage.
+          </p>
+          <p>
+            With every purchase you make with us, you're helping to change the
+            course of someone's life; you're walking alongside vulnerable women
+            as they find their way home again.
+          </p>
+        </div>
+      </div>
+      <div class="cont4">
+        <div class="item" id="item1">
+          <img src="assets/art1.png" alt="">
+          <p>The Love + Care Pack</p>
+          <p>$50</p>
+        </div>
+        <div class="item" id="item2">
+          <img src="assets/art2.png" alt="">
+          <p>Two Good Tote Bag</p>
+          <p>$40</p>
+        </div>
+        <div class="item" id="item3">
+          <img src="assets/art3.png" alt="">
+          <p>Nourish & Soothe Hand Lotion</p>
+          <p>$38</p>
+        </div>
+        <div class="item" id="item4">
+          <img src="assets/art4.png" alt="">
+          <p>COOKBOOK TWO</p>
+          <p>$48</p>
+        </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.js"></script>
     <script
+      preload
+      src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.js"
+    ></script>
+    <script
+      preload
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
       integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
       crossorigin="anonymous"
