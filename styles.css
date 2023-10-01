@@ -224,6 +224,7 @@ nav .part2{
     display: grid;
     grid-template-columns: 50vw 50vw;
     text-align: center;
+    overflow: hidden;
 }
 .cont4 .item{
     font-family: helvetica, sans-serif;
@@ -250,4 +251,36 @@ nav .part2{
     background-color:#c1aaa3 ;
     border-radius: 50%;
     transform: scale(0);
+}
+.cont5{
+    padding: 10vh 1rem;
+    padding-top: 0;
+    font-family: helvetica, sans-serif;
+}
+.cont5 .imageCont{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+.cont5 .img1,.cont5 .img2{
+    overflow: hidden;
+}
+.cont5 img{
+    width: 44vw;
+    max-width: 300px;
+    filter: grayscale(100%);
+    transform: scale(1.2);
+}
+.cont5 .textCont{
+    margin-top: 2rem;
+}
+.cont5 h3{
+    font-size: 30px;
+    font-weight: 1000;
+    letter-spacing: -2px;
+}
+.cont5 p{
+margin-top: 1.5rem;
+font-weight:400;
 }
